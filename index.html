@@ -25,28 +25,72 @@
 </head>
 
 <body>
-    <!-- header -->
     <header>
-        <div class="navbar">
-            <div class="container">
-                <div class="home-navbar">
-                    <div class="logo">
-                        <img src="images/logo.png" />
-                    </div>
-                    <div class="nav-list">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li> <a href="#">Guests</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li> <a href="#">Imhappiness</a></li>
-                        </ul>
+        <nav>
+            <div class="navbar">
+                <div class="container">
+                    <div class="home-navbar">
+                        <div class="logo">
+                            <img src="images/logo.png" />
+                        </div>
+                        <div class="nav-list">
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li> <a href="#guests">Guests</a></li>
+                                <li><a href="#about">About us</a></li>
+                                <li><a href="#gallery">Gallery</a></li>
+                                <li> <a href="#imhappiness">Imhappiness</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
+            <!-- bottom links -->
+            <div class="bottom-nav">
+                <ul class="bottom-nav-links">
+                    <li><a href="#home"><img src="images/bottom-home.svg" />
+                            <p>Home</p>
+                        </a>
+
+                    </li>
+                    <div class="line1"></div>
+                    <li><a href="#contact-location"><img src="images/bottom-location.svg" />
+                            <p>Location</p>
+                        </a>
+                    </li>
+                    <div class="line1"></div>
+
+                    <li><a href="#imhappiness"><img src="images/bottom-call.svg" />
+                            <p>Contact</p>
+                        </a>
+                    </li>
+                    <div class="line1"></div>
+                    <li class="nav-btn"><a><img src="images/bottom-menu.svg" />
+                            <p>Menu</p>
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- menu links -->
+        <div class="sidebar" id="sidebar">
+            <div>
+                <button class="close-btn" id="close-btn">
+                    <p>X</p>
+                </button>
+                <ul class="bottom-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#guests">Guests</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#imhappiness">Imhappiness</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
+    <!-- header -->
+
     <!-- header end -->
     <!-- main -->
     <main>
@@ -106,7 +150,7 @@
             </div>
         </section>
 
-        <section class="ambassador">
+        <section class="ambassador" id="guests">
             <div class="container">
                 <div class="heading">
                     <h3>Happiness Ambassadors</h3>
@@ -228,7 +272,7 @@
             </div>
         </section>
 
-        <section class="abouthappiness">
+        <section class="abouthappiness" id="about">
             <div class="container">
                 <div class="heading">
                     <h3>About Im Happiness</h3>
@@ -413,7 +457,7 @@
             </div>
         </section>
 
-        <section class="gallery">
+        <section class="gallery" id="gallery">
             <div class="container">
                 <div class="heading">
                     <h3>Gallery</h3>
@@ -446,7 +490,7 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="imhappiness">
             <div class="container">
                 <div class="contact-wrapper">
                     <div class="contact-logo">
@@ -461,28 +505,28 @@
                             <div class="collapse"><a><i class="fa-solid fa-angle-right" style="color: #c56216;"></i>
                                     Home</a></div>
                             <div class="content">
-                                <a>Home</a>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
                             <div class="border"></div>
 
                             <div class="collapse"><a><i class="fa-solid fa-angle-right" style="color: #c56216;"></i>
                                     Guests</a></div>
                             <div class="content">
-                                <a>Home</a>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
                             <div class="border"></div>
 
                             <div class="collapse"><a><i class="fa-solid fa-angle-right" style="color: #c56216;"></i>
                                     About us</a></div>
                             <div class="content">
-                                <a>Home</a>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
                             <div class="border"></div>
 
                             <div class="collapse"><a><i class="fa-solid fa-angle-right" style="color: #c56216;"></i>
                                     Gallery</a></div>
                             <div class="content">
-                                <a>Home</a>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>
                             <div class="border"></div>
                         </div>
@@ -503,7 +547,10 @@
     <!-- main end -->
     <!-- footer -->
     <footer>
-        <p>&copy; Copyright (c) Imhappiness.All Rights Reserved</p>
+        <p>&copy; Copyright (c) Imhappiness.All Rights Reserved <a style="color: #fff;" class="up-arrow" href="#home"><i
+                    class="fa-solid fa-angle-up"></i></a>
+        </p>
+
     </footer>
     <!-- footer end -->
 

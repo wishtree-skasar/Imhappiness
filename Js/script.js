@@ -1,4 +1,60 @@
 $(function () {
+  $(document).on("scroll", onScroll);
+
+  //smoothscroll
+  $('a[href^="#"]').on("click", function (e) {
+    e.preventDefault();
+    $(document).off("scroll");
+
+    $("a").each(function () {
+      $(this).removeClass("current");
+    });
+    $(this).addClass("current");
+
+    var target = this.hash,
+      menu = target;
+    $target = $(target);
+    $("html, body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $target.offset().top + 2,
+        },
+        1000,
+        "swing",
+        function () {
+          window.location.hash = target;
+          $(document).on("scroll", onScroll);
+        }
+      );
+  });
+
+  function onScroll(event) {
+    var scrollPos = $(document).scrollTop();
+    $(".nav-list a").each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if (
+        refElement.position().top <= scrollPos &&
+        refElement.position().top + refElement.height() > scrollPos
+      ) {
+        $(".nav-list ul li a").removeClass("current");
+        currLink.addClass("current");
+      } else {
+        currLink.removeClass("current");
+      }
+    });
+  }
+  // sidebar open close
+  $(".nav-btn").on("click", function () {
+    $(".sidebar").addClass("show-links");
+    $(".nav-logo").css("z-index", "-1");
+  });
+  $(".close-btn").on("click", function () {
+    $(".sidebar").removeClass("show-links");
+  });
+
+  // collpase menu in footer
   var coll = document.getElementsByClassName("collapse");
   var i;
 
@@ -27,18 +83,22 @@ $(function () {
     nav: false,
     responsive: {
       0: {
+        items: 1,
+        nav: false,
+      },
+      382: {
+        items: 2,
+        nav: false,
+      },
+      553: {
         items: 3,
         nav: false,
       },
-      764: {
-        items: 3,
-        nav: false,
-      },
-      998: {
+      767: {
         items: 4,
         nav: false,
       },
-      1200: {
+      980: {
         items: 5,
         nav: false,
       },
@@ -104,18 +164,22 @@ $(function () {
     nav: false,
     responsive: {
       0: {
+        items: 1,
+        nav: false,
+      },
+      382: {
+        items: 2,
+        nav: false,
+      },
+      553: {
         items: 3,
         nav: false,
       },
-      764: {
-        items: 3,
-        nav: false,
-      },
-      998: {
+      767: {
         items: 4,
         nav: false,
       },
-      1200: {
+      980: {
         items: 5,
         nav: false,
       },
