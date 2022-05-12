@@ -48,27 +48,31 @@ $(function () {
   // sidebar open close
   $(".nav-btn").on("click", function () {
     $(".sidebar").addClass("show-links");
+    $("body").css("margin-left", "25%");
     $(".nav-logo").css("z-index", "-1");
+    $(".bottom-nav").css("display", "none");
   });
   $(".close-btn").on("click", function () {
     $(".sidebar").removeClass("show-links");
+    $("body").css("margin-left", "0");
+    $(".bottom-nav").css("display", "block");
   });
 
   // collpase menu in footer
-  var coll = document.getElementsByClassName("collapse");
-  var i;
+  // var coll = document.getElementsByClassName("collapse");
+  // var i;
 
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  }
+  // for (i = 0; i < coll.length; i++) {
+  //   coll[i].addEventListener("click", function () {
+  //     this.classList.toggle("active");
+  //     var content = this.nextElementSibling;
+  //     if (content.style.display === "block") {
+  //       content.style.display = "none";
+  //     } else {
+  //       content.style.display = "block";
+  //     }
+  //   });
+  // }
 
   $("#ambassadors").owlCarousel({
     items: 5,
