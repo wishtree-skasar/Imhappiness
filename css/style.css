@@ -182,8 +182,13 @@ header {
 .banner-img {
   flex: 0 0 45%;
   max-width: 45%;
+  text-align: right;
+}
+.banner-img img {
+  max-width: 422px;
 }
 .Lets-make-world {
+  margin: 0;
   text-transform: uppercase;
   font-family: Raleway;
   font-size: 72px;
@@ -263,6 +268,7 @@ img.covid-helth-initiative {
   background-color: #f9f9ff;
   padding-bottom: 60px;
 }
+
 .ambassador .container,
 .team-members .container {
   margin-top: 56px;
@@ -768,13 +774,29 @@ footer p {
   .team-members {
     padding-bottom: 40px;
   }
+  .sanpshots {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
   .sanpshots p {
     font-size: 18px;
+  }
+  .underline {
+    margin-top: 10px;
+    height: 3px;
+  }
+  .ambassador .container,
+  .team-members .container,
+  .change-maker {
+    margin-top: 30px;
   }
 }
 @media (max-width: 515px) {
   .bottom-links li {
     font-size: 14px;
+  }
+  p {
+    font-size: 13px;
   }
 }
 @media (max-width: 489px) {
