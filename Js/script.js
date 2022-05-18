@@ -14,23 +14,20 @@ $(function () {
     var target = this.hash,
       menu = target;
     $target = $(target);
+
     $("html, body")
       .stop()
       .animate(
         {
-          scrollTop: $target.offset().top - 75,
+          scrollTop: $target.offset().top - $("header").innerHeight(),
         },
         1000,
-        "swing",
-        function () {
-          window.location.hash = target;
-          $(document).on("scroll", onScroll);
-        }
+        "swing"
       );
   });
 
   function onScroll(event) {
-    var scrollPos = $(document).scrollTop();
+    var scrollPos = $(document).scrollTop() + $("header").innerHeight();
     $(".nav-list a").each(function () {
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
